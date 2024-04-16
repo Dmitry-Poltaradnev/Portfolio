@@ -2,6 +2,21 @@ import styled from "styled-components";
 import BackGround from '../../assets/img/backFooter.png'
 
 const Footer = styled.footer`
+    position: relative;
+    padding: 145px 0;
+
+
+    &:before {
+        z-index: -100;
+        right: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(${BackGround}) no-repeat center center;
+        background-size: cover;
+    }    
 `
 const SocialList = styled.ul`
     margin-bottom: 20px;
@@ -9,8 +24,7 @@ const SocialList = styled.ul`
     justify-content: space-between;
     gap: 30px;
 `
-const SocialItem = styled.li`
-    
+const SocialItem = styled.li`    
 `
 
 const Copyright = styled.small`
@@ -23,19 +37,7 @@ const Copyright = styled.small`
 
 const WrapperFooter = styled.div`
     position: relative;
-    padding: 0;
-
-    &:before {
-        z-index: -100;
-        right: 0;
-        bottom: 0;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url(${BackGround}) no-repeat center center;
-        background-size: cover;
-    }
+    padding: 0;    
 `
 export const S = {
     Footer,

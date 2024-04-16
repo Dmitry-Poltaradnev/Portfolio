@@ -5,6 +5,19 @@ import BackGround from '../../../assets/img/backFooter.png'
 
 const Main = styled.section`
     min-height: 90vh;
+    position: relative;
+        &:before {
+        transform: rotate(180deg);
+        z-index: -100;
+        right: 0;
+        top: 0;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url(${BackGround}) no-repeat center center;
+        background-size: cover;
+    }
 `
 const Name = styled.h2`
     ${font({family: 'Roboto, sans-serif', Fmin: 42, Fmax: 58, weight: 700})}
@@ -49,20 +62,7 @@ const MainContent = styled.div`
 
 const WrapperMain = styled.div`
     position: relative;
-    padding: 0;
-
-    &:before {
-        transform: rotate(180deg);
-        z-index: -100;
-        right: 0;
-        top: 0;
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: url(${BackGround}) no-repeat center center;
-        background-size: cover;
-    }
+    padding: 0;   
 `
 export const S = {
     Main,
